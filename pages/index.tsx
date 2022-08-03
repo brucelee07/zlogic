@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import Heading from '../components/heading';
+import Heading from '../components/heading'
 
 const ButtonLink: React.FC<{ title: string; link: string }> = ({
   title,
