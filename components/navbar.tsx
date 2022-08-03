@@ -27,9 +27,9 @@ const ToggleButton: React.FC<ToggleProps> = ({ onclick }) => (
       xmlns='http://www.w3.org/2000/svg'
     >
       <path
-        fill-rule='evenodd'
+        fillRule='evenodd'
         d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-        clip-rule='evenodd'
+        clipRule='evenodd'
       ></path>
     </svg>
   </button>
@@ -67,7 +67,14 @@ const SingleLinke: React.FC<Props> = ({ title, link, currentRoute }) => (
 const NavBar: React.FC = () => {
   const [show, setShow] = useState(false)
   const router = useRouter()
-  const currentRoute = router.pathname
+  let currentRoute = router.pathname
+  if (currentRoute.includes('/blog/')) {
+    currentRoute = '/blog'
+  }
+  if (currentRoute.includes('/work/')) {
+    currentRoute = '/work'
+  }
+
   const menus = [
     ['首页', '/'],
     ['博客', '/blog'],
@@ -76,16 +83,17 @@ const NavBar: React.FC = () => {
   ]
   return (
     <>
-      <div className='bg-zinc-100 p-1 shadow-md'>
-        <nav className='flex flex-row space-x-4 xl:space-x-12 items-center justify-center text-xl text-gray-700'>
+      <div className='sticky opacity-50 top-0 bg-zinc-100 p-1 shadow-sm'>
+        <nav className='flex flex-row space-x-4 xl:space-x-12 items-center justify-center text-xl'>
           <Link href='/'>
-            <Image
-              src='/../public/assets/logo.png'
-              width={30}
-              height={30}
-              alt='zlogic'
-              className='hover:cursor-pointer'
-            />
+            <a>
+              <Image
+                src='/assets/logo.png'
+                width={30}
+                height={30}
+                alt='zlogic'
+              />
+            </a>
           </Link>
           {menus.map((menu, idx) => (
             <SingleLinke

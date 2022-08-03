@@ -31,7 +31,7 @@ const components = {
   // em: EM,
   li: LI,
 }
-const Post: NextPage<SinglePost> = ({
+const SingleWork: NextPage<SinglePost> = ({
   frontMatter: { title, date },
   mdxSource,
 }) => {
@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('works'))
   const paths = files.map((file) => {
     return {
       params: {
@@ -81,4 +81,4 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   }
 }
 
-export default Post
+export default SingleWork

@@ -7,7 +7,7 @@ type Props = {
 }
 const SingleLinke: React.FC<Props> = ({ title, link }) => (
   <Link href={link}>
-    <a className='w-20 text-center p-2 '>{title}</a>
+    <a className='w-20 text-center p-2 hover:underline '>{title}</a>
   </Link>
 )
 const Footer: React.FC = () => {

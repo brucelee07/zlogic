@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { GetStaticProps } from 'next'
 import matter from 'gray-matter'
-import Link from 'next/link'
+import Card from '../components/post-card'
 
 type Post = {
   frontMatter: {
@@ -25,15 +25,13 @@ const Blog: React.FC<Props> = ({ posts }) => {
     <>
       <div className='min-h-[85vh]'>
         {posts.map((post, idx) => (
-          <div key={idx}>
-            <Link href={'/blog/' + post.slug}>
-              <p className='cursor-pointer'>{post.frontMatter.title}</p>
-            </Link>
-            <p>{post.slug}</p>
-            <p>{post.frontMatter.date}</p>
-            <p>{post.frontMatter.summary}</p>
-            <p>{post.frontMatter.description}</p>
-            <p>{post.frontMatter.tags}</p>
+          <div key={idx} className="p-2">
+            <Card
+              title={post.frontMatter.title}
+              date={post.frontMatter.date}
+              summary={post.frontMatter.summary}
+              slug={post.slug}
+            />
           </div>
         ))}
       </div>
