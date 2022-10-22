@@ -10,7 +10,13 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import hljs from 'highlight.js'
 import typescript from 'highlight.js/lib/languages/typescript'
 import python from 'highlight.js/lib/languages/python'
-import { BlockQuote, EM, Heading1, Heading3, LI } from '../../components/mdxcomponents'
+import {
+  BlockQuote,
+  EM,
+  Heading1,
+  Heading3,
+  LI,
+} from '../../components/mdxcomponents'
 
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('python', python)
@@ -36,7 +42,7 @@ const components = {
 const SingleWork: NextPage<SinglePost> = ({
   frontMatter: { title, date },
   mdxSource,
-}) => {
+}:SinglePost) => {
   useEffect(() => {
     hljs.highlightAll()
   }, [])

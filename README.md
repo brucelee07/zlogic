@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] add blogs
-- [ ] add works
-- [ ] add links
-- [ ] fix contact info
+- [x] add blogs
+- [x] add works
+- [x] add links
+- [x] fix contact info
