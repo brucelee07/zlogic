@@ -10,14 +10,14 @@ const About: NextPage = () => {
         <Heading title={'联系方式'} />
         <div className='bg-zinc-100 rounded-xl p-8 flex flex-col m-auto'>
           <p className='mt-4 text-center pb-2'>
-            主要是从事python培训，数据分析，项目开发咨询。
+            主要是从事python/c++/rust项目开发, 咨询, 辅导培训。
           </p>
           <p>
             <strong className='pr-5'>QQ:</strong>
-            10000000
+            2908053838
           </p>
           <p>
-            <strong className='pr-3'>邮箱:</strong>10000000@qq.com
+            <strong className='pr-3'>邮箱:</strong>2908053838@qq.com
           </p>
         </div>
       </div>

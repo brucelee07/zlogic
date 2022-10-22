@@ -6,15 +6,16 @@ const SiderBar: React.FC = () => {
     <div className='flex flex-col items-center text-gray-700 mt-10'>
       <Image
         className='object-cover rounded-full shadow-md'
-        src='https://flowbite.com/docs/images/blog/image-4.jpg'
+        src='/assets/bruce.jpg'
         width={120}
         height={120}
         alt=''
       />
       <p className='text-center font-bold mt-5'>Bruce</p>
-      <div className='divide-y-2 w-full p-5'>
+      <div className='divide-y-3 w-full p-5'>
         <p className='text-center font-bold m-2 text-blue-400'>Python</p>
         <p className='text-center font-bold m-2 text-blue-400'>Javascript</p>
+        <p className='text-center font-bold m-2 text-blue-400'>C/C++</p>
         <p className='text-center font-bold m-2 text-blue-400'>Rust</p>
       </div>
     </div>

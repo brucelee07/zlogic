@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   const links = [
     ['首页', '/'],
     ['关于', '/about'],
-    ['Github', 'https://www.github.com'],
+    ['Github', 'https://github.com/brucelee07'],
   ]
   return (
     <footer className='flex flex-col items-center justify-content text-gray-500 text-sm'>

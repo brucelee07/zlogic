@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['flowbite.com'],
+    domains: ['flowbite.com', 'vip2.loli.io'],
   },
 }

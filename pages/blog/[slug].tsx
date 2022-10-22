@@ -10,7 +10,13 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import hljs from 'highlight.js'
 import typescript from 'highlight.js/lib/languages/typescript'
 import python from 'highlight.js/lib/languages/python'
-import { BlockQuote, EM, Heading, LI } from '../../components/mdxcomponents'
+import {
+  BlockQuote,
+  EM,
+  Heading1,
+  Heading3,
+  LI,
+} from '../../components/mdxcomponents'
 
 hljs.registerLanguage('typescript', typescript)
 hljs.registerLanguage('python', python)
@@ -27,8 +33,10 @@ type SinglePost = {
 }
 const components = {
   blockquote: BlockQuote,
-  h3: Heading,
-  // em: EM,
+  h3: Heading3,
+  h2: Heading3,
+  h1: Heading1,
+  em: EM,
   li: LI,
 }
 const Post: NextPage<SinglePost> = ({

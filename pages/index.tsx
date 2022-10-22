@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         你好， 我主要从事软件开发和技术培训。
       </p>
       <h3 className='md:text-xl m-4 text-left'>
-        Bruce -- (Python开发培训 / 算法培训 / 机器学习 / Qt开发 / Rust开发 /
+        Bruce -- (Python开发培训 / 算法培训 / 机器学习 / Qt开发 / C++开发 /
         通信开发 / APP开发)
       </h3>
       <Heading title={'作品'} />
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         </p>
         <p>
           <strong className='pr-3'>桌面开发:</strong>工业软件开发, 通信软件开发,
-          socket通信
+          socket通信, 图像处理，qt, opencv等等
         </p>
         <p>
           <strong className='pr-3'>web开发:</strong>
@@ -53,8 +53,12 @@ const Home: NextPage = () => {
       <Heading title={'我 ♥'} />
       <p className='m-4 ml-10'>读闲书，看无聊电视剧, 跑步, 设计算法。</p>
       <Heading title={'其他链接'} />
-      <p className='m-4 ml-10 text-sm'>github</p>
-      <p className='m-4 ml-10 text-sm'>csdn</p>
+      <p className='my-4 ml-10 text-sm'>
+        <a href='https://github.com/brucelee07'>github</a>
+      </p>
+      <p className='ml-10 text-sm'>
+        <a href='#'>csdn</a>
+      </p>
       <ButtonLink link={'/blog'} title={'最新博客'} />
     </div>
   )

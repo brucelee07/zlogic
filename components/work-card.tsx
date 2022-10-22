@@ -5,15 +5,16 @@ import React from 'react'
 type Props = {
   title: string
   date: string
+  imgUrl: string
   summary?: string
   slug: string
 }
-const Card: React.FC<Props> = ({ title, date, summary, slug }) => (
+const Card: React.FC<Props> = ({ title, date, summary, slug, imgUrl }) => (
   <Link href={'/work/' + slug}>
     <a className='flex pl-5 flex-col items-center bg-white rounded-lg shadow-md  hover:bg-gray-100 p-2'>
       <Image
         className='object-cover w-full h-48 rounded-lg md:h-auto md:w-48'
-        src='https://flowbite.com/docs/images/blog/image-4.jpg'
+        src={imgUrl}
         width={170}
         height={100}
         alt=''

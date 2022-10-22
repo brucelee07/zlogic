@@ -12,6 +12,7 @@ type Post = {
     summary?: string
     description?: string
     tags?: Array<string>
+    imgUrl: string
   }
   slug: string
 }
@@ -27,6 +28,7 @@ const Work: React.FC<Props> = ({ posts }) => {
           <div key={idx} className='p-2'>
             <Card
               title={post.frontMatter.title}
+              imgUrl={post.frontMatter.imgUrl}
               date={post.frontMatter.date}
               summary={post.frontMatter.summary}
               slug={post.slug}

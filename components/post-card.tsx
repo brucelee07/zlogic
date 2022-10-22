@@ -7,18 +7,19 @@ type Props = {
   date: string
   summary?: string
   slug: string
+  imgUrl: string
 }
-const Card: React.FC<Props> = ({ title, date, summary, slug }) => (
+const Card: React.FC<Props> = ({ title, date, summary, slug, imgUrl }) => (
   <Link href={'/blog/' + slug}>
     <a className='flex pl-5 flex-col items-center bg-white rounded-lg shadow-md md:flex-row  hover:bg-gray-100'>
       <Image
         className='object-cover w-full h-48 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg'
-        src='https://flowbite.com/docs/images/blog/image-4.jpg'
+        src={imgUrl}
         width={120}
-        height={48}
+        height={56}
         alt=''
       />
-      <div className='flex flex-col justify-between p-2 pl-8 leading-normal'>
+      <div className='flex flex-col  p-2 pl-8 leading-normal'>
         <h5 className='mb-1 text-2xl font-bold tracking-tight text-gray-900'>
           {title}
         </h5>

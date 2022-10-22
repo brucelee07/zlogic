@@ -9,6 +9,7 @@ type Post = {
   frontMatter: {
     title: string
     date: string
+    imgUrl: string
     summary?: string
     description?: string
     tags?: Array<string>
@@ -29,6 +30,8 @@ const Blog: React.FC<Props> = ({ posts }) => {
             <Card
               title={post.frontMatter.title}
               date={post.frontMatter.date}
+              imgUrl={post.frontMatter.imgUrl}
+	      
               summary={post.frontMatter.summary}
               slug={post.slug}
             />
