@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Props = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 export const BlockQuote: React.FC<Props> = ({ children }: Props) => (
   <blockquote className='bg-zinc-200 text-gray-500 m-8 p-3 flex flex-row rounded-md shadow-xl'>
@@ -18,6 +18,6 @@ export const LI: React.FC<Props> = ({ children }: Props) => (
   <li className='flex-row pl-2 text-md text-gray-700'> - {children}</li>
 )
 
-export const EM: React.FC <Props>= ({ children }: Props) => (
+export const EM: React.FC<Props> = ({ children }: Props) => (
   <em className='pl-5 text-sm text-gray-500'>-- {children}</em>
 )
