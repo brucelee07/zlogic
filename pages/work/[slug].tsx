@@ -42,7 +42,7 @@ const components = {
 const SingleWork: NextPage<SinglePost> = ({
   frontMatter: { title, date },
   mdxSource,
-}:SinglePost) => {
+}: SinglePost) => {
   useEffect(() => {
     hljs.highlightAll()
   }, [])

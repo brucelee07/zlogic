@@ -26,12 +26,11 @@ const Blog: React.FC<Props> = ({ posts }) => {
     <>
       <div className='min-h-[85vh]'>
         {posts.map((post, idx) => (
-          <div key={idx} className="p-2">
+          <div key={idx} className='p-2'>
             <Card
               title={post.frontMatter.title}
               date={post.frontMatter.date}
               imgUrl={post.frontMatter.imgUrl}
-	      
               summary={post.frontMatter.summary}
               slug={post.slug}
             />
