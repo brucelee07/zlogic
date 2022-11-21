@@ -1,5 +1,5 @@
 ---
-title: PYQT项目开发
+title: c++ qt 教学项目
 date: 'Noverber 21, 2022'
 summary: 'C++ qt 教学项目'
 imgUrl: https://vip2.loli.io/2022/10/22/ODyGeNp2StbPvEV.png
