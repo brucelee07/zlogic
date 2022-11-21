@@ -10,4 +10,5 @@ tags: ['python', 'qt', 'sqlalchemy']
 ![pyqt](https://vip2.loli.io/2022/10/22/ODyGeNp2StbPvEV.png)
 
 ## PYQT 项目说明
+
 - pyqt 项目后续会选择部分可以展示的项目
