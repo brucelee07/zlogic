@@ -11,7 +11,7 @@ const SEOHead: React.FC<Props> = (props: Props) => {
   const { title, description } = props
   return (
     <Head>
-      <title>{title} | ZLogic Dev</title>
+      <title>{title} | PyLogic Dev</title>
       <meta name='description' content={description} />
     </Head>
   )

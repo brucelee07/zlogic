@@ -1,4 +1,4 @@
-# Zlogic dev blog website
+# PyLogic dev blog website
 
 ## TODO
 

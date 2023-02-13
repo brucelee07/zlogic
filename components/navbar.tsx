@@ -91,7 +91,7 @@ const NavBar: React.FC = () => {
                 src='/assets/logo.png'
                 width={30}
                 height={30}
-                alt='zlogic'
+                alt='pylogic'
               />
             </a>
           </Link>
