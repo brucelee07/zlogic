@@ -15,8 +15,8 @@ const SiderBar: React.FC = () => {
       <div className='divide-y-3 w-full p-5'>
         <p className='text-center font-bold m-2 text-blue-400'>Python</p>
         <p className='text-center font-bold m-2 text-blue-400'>Javascript</p>
+        <p className='text-center font-bold m-2 text-blue-400'>Java/Kotlin</p>
         <p className='text-center font-bold m-2 text-blue-400'>C/C++</p>
-        <p className='text-center font-bold m-2 text-blue-400'>Rust</p>
       </div>
     </div>
   )

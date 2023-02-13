@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           Django开发，Openstack二次开发
         </p>
         <p>
-          <strong className='pr-4'>APP开发:</strong>React Native
+          <strong className='pr-4'>APP开发:</strong>Java/Kotlin
         </p>
       </div>
       <Heading title={'我 ♥'} />
