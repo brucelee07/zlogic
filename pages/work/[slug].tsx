@@ -10,7 +10,7 @@ import remarkGfm from 'remark-gfm'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 interface Params extends ParsedUrlQuery {
 	slug: string
