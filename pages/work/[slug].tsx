@@ -9,7 +9,8 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism/solarized-dark-atom'
+
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 interface Params extends ParsedUrlQuery {
 	slug: string
@@ -40,7 +41,7 @@ const SingleWork: NextPage<SinglePost> = ({
 							return !inline && match ? (
 								<SyntaxHighlighter
 									{...props}
-									style={dark}
+									style={docco}
 									language={match[1]}
 									PreTag='div'
 								>
