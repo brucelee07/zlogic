@@ -2,7 +2,7 @@
   "name": "pylogic",
   "author": "Bruce",
   "version": "0.9.0",
-	"license": "MIT",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,9 @@
     "next-mdx-remote": "^4.1.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.3",

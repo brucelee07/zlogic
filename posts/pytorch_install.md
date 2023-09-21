@@ -45,4 +45,4 @@ conda activate torch
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 ```
 
-- 这样就算安装成功
+> 这样就算安装成功

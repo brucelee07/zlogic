@@ -1,58 +1,59 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ParsedUrlQuery } from 'querystring'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 
-import hljs from 'highlight.js'
-import typescript from 'highlight.js/lib/languages/typescript'
-import python from 'highlight.js/lib/languages/python'
-import {
-  BlockQuote,
-  EM,
-  Heading1,
-  Heading3,
-  LI,
-} from '../../components/mdxcomponents'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
-hljs.registerLanguage('typescript', typescript)
-hljs.registerLanguage('python', python)
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism/solarized-dark-atom'
 
 interface Params extends ParsedUrlQuery {
   slug: string
 }
+
 type SinglePost = {
   frontMatter: {
     title: string
     date: string
   }
-  mdxSource: MDXRemoteSerializeResult
+  mdxSource: string
 }
-const components = {
-  blockquote: BlockQuote,
-  h1: Heading1,
-  h2: Heading3,
-  h3: Heading3,
-  em: EM,
-  li: LI,
-}
+
 const SingleWork: NextPage<SinglePost> = ({
   frontMatter: { title, date },
   mdxSource,
 }: SinglePost) => {
-  useEffect(() => {
-    hljs.highlightAll()
-  }, [])
   return (
     <>
-      <div className='min-h-[85vh] text-gray-700'>
+      <div className='min-h-[88vh] text-gray-700 p-5'>
         <h3 className='mt-3 text-center font-bold text-2xl'>{title}</h3>
         <p className='text-sm text-right mb-2 pr-2'>{date}</p>
-        {/* <MDXRemote {...mdxSource} /> */}
-        <MDXRemote {...mdxSource} components={components} />
+        <ReactMarkdown
+          children={mdxSource}
+          remarkPlugins={[remarkGfm]}
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '')
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  {...props}
+                  children={String(children).replace(/\n$/, '')}
+                  style={dark}
+                  language={match[1]}
+                  PreTag='div'
+                />
+              ) : (
+                <code {...props} className={className}>
+                  {children}
+                </code>
+              )
+            },
+          }}
+        />
       </div>
     </>
   )
@@ -61,10 +62,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as Params
   const markdownwithMeta = fs.readFileSync(
     path.join('works', slug + '.md'),
-    'utf-8'
+    'utf-8',
   )
   const { data: frontMatter, content } = matter(markdownwithMeta)
-  const mdxSource = await serialize(content)
+  const mdxSource = content
   return {
     props: {
       frontMatter,
