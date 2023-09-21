@@ -9,7 +9,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { materialDark as style } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { materialDark as style } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 interface Params extends ParsedUrlQuery {
 	slug: string
