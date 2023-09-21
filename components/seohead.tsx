@@ -7,8 +7,7 @@ type Props = {
   description?: string
 }
 
-const SEOHead: React.FC<Props> = (props: Props) => {
-  const { title, description } = props
+const SEOHead: React.FC<Props> = ({ title, description }) => {
   return (
     <Head>
       <title>{title} | PyLogic Dev</title>

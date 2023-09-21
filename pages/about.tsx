@@ -6,11 +6,11 @@ const About: NextPage = () => {
   return (
     <>
       <SEOHead title='about me' />
-      <div className='flex flex-col min-h-[85vh] text-gray-700 pb-3 mt-7'>
+      <div className='flex flex-col min-h-[87vh] text-gray-700 pb-3 mt-7'>
         <Heading title={'联系方式'} />
         <div className='bg-zinc-100 rounded-xl p-8 flex flex-col m-auto'>
           <p className='mt-4 text-center pb-2'>
-            主要是从事python/java/kotlin/c++项目开发, 咨询, 辅导培训。
+            主要是从事python/js/ts/c++/c# 软件开发, 咨询, 辅导培训。
           </p>
           <p>
             <strong className='pr-5'>QQ:</strong>
