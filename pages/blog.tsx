@@ -18,7 +18,7 @@ type Post = {
 }
 
 type Props = {
-  posts: Array<Post>
+  posts: Post[]
 }
 
 const Blog: React.FC<Props> = ({ posts }) => {

@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </p>
       <Heading title={'其他链接'} />
       <p className='my-4 ml-10 text-sm'>
-        <a href='https://github.com/brucelee07'>@github</a>
+        <a href='https://github.com/bruceunx'>@github</a>
       </p>
       <p className='ml-10 text-sm'>
         <a href='https://blog.csdn.net/bruceunx'>@csdn</a>
