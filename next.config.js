@@ -2,6 +2,22 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['flowbite.com', 'vip2.loli.io', 'sm.ms'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "flowbite.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "vip2.loli.io",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "sm.ms",
+        pathname: "**",
+      },
+    ],
   },
-}
+};

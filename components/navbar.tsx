@@ -43,8 +43,9 @@ const MobileLinke: React.FC<Props> = ({
 }) => (
   <Link href={link}>
     <a
-      className={`w-full text-center p-2 rounded-md hover:bg-zinc-200 ${currentRoute ? "bg-zinc-200" : ""
-        }`}
+      className={`w-full text-center p-2 rounded-md hover:bg-zinc-200 ${
+        currentRoute ? "bg-zinc-200" : ""
+      }`}
       onClick={onclick}
     >
       {title}
@@ -52,7 +53,9 @@ const MobileLinke: React.FC<Props> = ({
   </Link>
 );
 const SingleLinke: React.FC<Props> = ({ title, link, currentRoute }) => (
-  <Link href={link}>{title}</Link>
+  <Link href={link} className={`${currentRoute ? "text-blue-500" : ""}`}>
+    {title}
+  </Link>
 );
 
 const NavBar: React.FC = () => {
@@ -78,9 +81,10 @@ const NavBar: React.FC = () => {
         <nav className="flex flex-row space-x-4 xl:space-x-12 items-center justify-center text-xl">
           <Link href="/">
             <Image
-              src="/assets/logo.png"
+              src="/assets/bruce.jpg"
               width={30}
               height={30}
+              className="rounded-full"
               alt="pylogic"
             />
           </Link>
@@ -103,7 +107,7 @@ const NavBar: React.FC = () => {
                 key={idx}
                 title={menu[0]}
                 link={menu[1]}
-                currentRoute={currentRoute == menu[1]}
+                currentRoute={currentRoute === menu[1]}
                 onclick={() => setShow(!show)}
               />
             ))}

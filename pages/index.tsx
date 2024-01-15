@@ -14,15 +14,15 @@ const ButtonLink: React.FC<ButtonLinkProp> = ({ title, link }) => (
     </button>
   </Link>
 );
+
 const Home: NextPage = () => {
   return (
     <div className="flex flex-col min-h-[90vh] text-gray-700 pb-3">
       <p className="bg-zinc-100 rounded-md p-2 text-center m-5">
-        你好， 我主要从事软件开发和算法设计。
+        Coding is a style of life
       </p>
       <h3 className="md:text-xl m-4 text-left">
-        Bruce -- (Python开发 / AI算法 / 上位机开发 / 视觉应用 / Qt开发 / C++开发
-        / 通信开发 / APP开发)
+        Bruce -- (软件开发，主要从事AI, IoT, Full-Stack Web开发)
       </h3>
       <Heading title={"作品"} />
       <p className="m-4">
