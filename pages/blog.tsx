@@ -24,7 +24,7 @@ type Props = {
 const Blog: React.FC<Props> = ({ posts }) => {
   return (
     <>
-      <div className='min-h-[85vh]'>
+      <div className='h-full'>
         {posts.map((post, idx) => (
           <div key={idx} className='p-2'>
             <Card

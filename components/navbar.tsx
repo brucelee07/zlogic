@@ -41,15 +41,14 @@ const MobileLinke: React.FC<Props> = ({
   currentRoute,
   onclick,
 }) => (
-  <Link href={link}>
-    <a
-      className={`w-full text-center p-2 rounded-md hover:bg-zinc-200 ${
-        currentRoute ? "bg-zinc-200" : ""
-      }`}
-      onClick={onclick}
-    >
-      {title}
-    </a>
+  <Link
+    href={link}
+    className={`w-full text-center p-2 rounded-md hover:bg-zinc-200 ${
+      currentRoute ? "bg-zinc-200" : ""
+    }`}
+    onClick={onclick}
+  >
+    {title}
   </Link>
 );
 const SingleLinke: React.FC<Props> = ({ title, link, currentRoute }) => (
@@ -77,7 +76,7 @@ const NavBar: React.FC = () => {
   ];
   return (
     <>
-      <div className="sticky opacity-50 top-0 bg-zinc-100 p-1 shadow-sm">
+      <div className="sticky opacity-50 top-0 bg-zinc-100 p-5 shadow-sm">
         <nav className="flex flex-row space-x-4 xl:space-x-12 items-center justify-center text-xl">
           <Link href="/">
             <Image

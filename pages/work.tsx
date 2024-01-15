@@ -23,7 +23,7 @@ type Props = {
 const Work: React.FC<Props> = ({ posts }) => {
   return (
     <>
-      <div className='min-h-[85vh] grid grid-cols-1 md:grid-cols-2 gap-1'>
+      <div className='h-full grid grid-cols-1 md:grid-cols-2 gap-1'>
         {posts.map((post, idx) => (
           <div key={idx} className='p-2'>
             <Card

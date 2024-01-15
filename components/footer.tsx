@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     ["Github", "https://github.com/brucelee07"],
   ];
   return (
-    <footer className="flex flex-col items-center justify-content text-gray-500 text-sm">
+    <footer className="flex flex-col items-center justify-content text-gray-500 text-sm py-5">
       <ul className="flex flex-row xl:space-x-20">
         {links.map((link, idx) => (
           <SingleLinke key={idx} link={link[1]} title={link[0]} />
