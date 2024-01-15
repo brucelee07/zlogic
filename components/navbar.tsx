@@ -71,7 +71,7 @@ const NavBar: React.FC = () => {
   const menus = [
     ["首页", "/"],
     ["博客", "/blog"],
-    ["作品", "/work"],
+    // ["作品", "/work"],
     ["关于", "/about"],
   ];
   return (
@@ -95,6 +95,15 @@ const NavBar: React.FC = () => {
               currentRoute={currentRoute == menu[1]}
             />
           ))}
+          <Link href="https://www.github.com/bruceunx" target="_blank">
+            <Image
+              src="/github-light.svg"
+              width={20}
+              height={20}
+              className="rounded-full"
+              alt="github"
+            />
+          </Link>
           <ToggleButton onclick={() => setShow(!show)} />
         </nav>
       </div>

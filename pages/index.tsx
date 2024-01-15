@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Heading from "../components/heading";
 
@@ -45,8 +46,7 @@ const Home: NextPage = () => {
         </p>
         <p className="py-2">
           <strong className="pr-3">web开发:</strong>
-          前端Reactjs, 后端FastAPI, Django开发，Flask,
-          Openstack二次开发等待
+          前端Reactjs, 后端FastAPI, Django开发，Flask, Openstack二次开发等待
         </p>
         <p className="py-2">
           <strong className="pr-4">APP开发:</strong>使用ReactNative开发跨平台APP
@@ -58,10 +58,23 @@ const Home: NextPage = () => {
       </p>
       <Heading title={"其他链接"} />
       <p className="my-4 ml-10 text-sm">
-        <a href="https://github.com/bruceunx">@github</a>
+        <a href="https://github.com/bruceunx" target="_blank" rel="noreferrer">
+          <Image
+            src="/github-light.svg"
+            width={20}
+            height={20}
+            alt="bruceunx"
+          />
+        </a>
       </p>
       <p className="ml-10 text-sm">
-        <a href="https://blog.csdn.net/bruceunx">@csdn</a>
+        <a
+          href="https://blog.csdn.net/bruceunx"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @csdn
+        </a>
       </p>
       <ButtonLink link={"/blog"} title={"最新博客"} />
     </div>
