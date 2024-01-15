@@ -32,7 +32,6 @@ const Home: NextPage = () => {
       <p className="ml-4">
         开发过各种不同类型的桌面软件，涉及上位机开发，工业软件开发，通信软件开发，图像处理等等。
       </p>
-      <ButtonLink link={"/work"} title={"作品"} />
       <Heading title={"内容"} />
       <div className="m-4 ml-5">
         <p className="py-2">
