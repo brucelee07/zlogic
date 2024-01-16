@@ -10,7 +10,7 @@ interface ButtonLinkProp {
 
 const ButtonLink: React.FC<ButtonLinkProp> = ({ title, link }) => (
   <Link href={link}>
-    <button className="bg-blue-500 w-28 rounded-md p-1 text-white hover:bg-blue-700 font-bold m-4">
+    <button className="bg-teal-600 w-28 rounded-md p-1 text-white hover:bg-teal-700 font-bold m-4">
       {title}
     </button>
   </Link>
@@ -18,7 +18,7 @@ const ButtonLink: React.FC<ButtonLinkProp> = ({ title, link }) => (
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col min-h-[90vh] text-gray-700 pb-3">
+    <div className="flex flex-col h-full text-gray-700 pb-3">
       <p className="bg-zinc-100 rounded-md p-2 text-center m-5">
         AI engineer, Full-Stack Web developer, IoT developer
       </p>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         开发过各种不同类型的桌面软件，涉及上位机开发，工业软件开发，通信软件开发，图像处理等等。
       </p>
       <Heading title={"内容"} />
-      <div className="m-4 ml-5">
+      <div className="ml-5">
         <p className="py-2">
           <strong className="pr-3">AI算法:</strong>
           涉及GNN, RNN, LSTM, Transformer, BERT, GPT, GAN, DQN等等
@@ -52,29 +52,35 @@ const Home: NextPage = () => {
         </p>
       </div>
       <Heading title={"我 ♥"} />
-      <p className="m-4 ml-10">
+      <code className="ml-10 bg-gray-100 p-2 w-fit text-blue-400 opacity-70">
         Coding, Reading, Writing, Thinking, Playing, Sleeping
-      </p>
+      </code>
       <Heading title={"其他链接"} />
-      <p className="my-4 ml-10 text-sm">
-        <a href="https://github.com/bruceunx" target="_blank" rel="noreferrer">
-          <Image
-            src="/github-light.svg"
-            width={20}
-            height={20}
-            alt="bruceunx"
-          />
-        </a>
-      </p>
-      <p className="ml-10 text-sm">
-        <a
-          href="https://blog.csdn.net/bruceunx"
-          target="_blank"
-          rel="noreferrer"
-        >
-          @csdn
-        </a>
-      </p>
+      <div className="flex flex-grow align-center items-center">
+        <p className="my-4 ml-10 text-sm">
+          <a
+            href="https://github.com/bruceunx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/github-light.svg"
+              width={20}
+              height={20}
+              alt="bruceunx"
+            />
+          </a>
+        </p>
+        <p className="ml-10 text-sm text-blue-400">
+          <a
+            href="https://blog.csdn.net/bruceunx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @csdn
+          </a>
+        </p>
+      </div>
       <ButtonLink link={"/blog"} title={"最新博客"} />
     </div>
   );

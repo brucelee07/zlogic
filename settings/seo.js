@@ -1,9 +1,9 @@
 const settings = {
   meta: {
-    rootUrl: 'www.pylogic.net',
-    title: 'Py Logic Dev',
-    description: '主要从事软件开发, 项目咨询服务',
+    rootUrl: "www.pylogic.net",
+    title: "AI Driver-PYLOGIC",
+    description: "AI engineer, Full-Stack Web developer, IoT developer",
   },
-}
+};
 
-export default settings
+export default settings;

@@ -31,7 +31,7 @@ const SinglePost: NextPage<SinglePost> = ({
   return (
     <>
       <SEOHead title={title} description={title} />
-      <div className="min-h-[88vh] text-gray-700 p-5">
+      <div className="h-full text-gray-700 p-5">
         <h3 className="mt-3 text-center font-bold text-2xl">{title}</h3>
         <p className="text-sm text-right mb-2 pr-2">{date}</p>
         <ReactMarkdown

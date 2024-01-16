@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   const links = [
     ["首页", "/"],
     ["关于", "/about"],
-    ["Github", "https://github.com/brucelee07"],
+    ["Github", "https://github.com/bruceunx"],
   ];
   return (
     <footer className="flex flex-col items-center justify-content text-gray-500 text-sm py-5">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <SingleLinke key={idx} link={link[1]} title={link[0]} />
         ))}
       </ul>
-      <p>Copyright &copy; {new Date().getFullYear()} Z- Logic </p>
+      <p>Copyright &copy; {new Date().getFullYear()} PYLOGIC </p>
     </footer>
   );
 };
